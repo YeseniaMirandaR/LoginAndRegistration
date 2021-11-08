@@ -1,0 +1,11 @@
+package com.yesenia.repositories;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.yesenia.models.User;
+
+@Repository
+public interface UserRepository extends CrudRepository<User, Long> {
+	User findByEmail(String email);
+}
